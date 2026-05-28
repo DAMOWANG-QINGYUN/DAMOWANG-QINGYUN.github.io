@@ -404,6 +404,151 @@ a {
     font-size: 0.85rem;
 }
 
+/* ========== 详情页 ========== */
+.detail-hero {
+    padding: 120px 0 60px;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    text-align: center;
+}
+
+.detail-header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.detail-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.detail-section {
+    padding: 80px 0;
+}
+
+.detail-section.alt-bg {
+    background: var(--bg-secondary);
+}
+
+.detail-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.detail-text p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+}
+
+.gallery-item {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.gallery-item h3 {
+    padding: 20px 20px 12px;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+.gallery-caption {
+    padding: 12px 20px 20px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* 分析卡片 */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.analysis-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--card-shadow);
+    transition: all var(--transition);
+}
+
+.analysis-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.analysis-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.analysis-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* 像素画网格 */
+.pixel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.pixel-item {
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: all var(--transition);
+}
+
+.pixel-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.pixel-item img {
+    width: 100%;
+    image-rendering: pixelated;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.pixel-item p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.footer a {
+    color: var(--accent-coral);
+    transition: color var(--transition);
+}
+
+.footer a:hover {
+    color: #d6725c;
+}
+
 /* ========== 淡入动画 ========== */
 .fade-in {
     opacity: 0;
@@ -448,6 +593,18 @@ a {
     .contact-links {
         flex-direction: column;
         align-items: center;
+    }
+
+    .detail-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-section {
+        padding: 56px 0;
+    }
+
+    .pixel-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }
 
